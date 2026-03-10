@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const lastUpdated = 'March 2025';
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description="Privacy policy for chrisjbell.com and the Kate AI job coaching agent."
+>
+  <div class="py-16 md:py-20">
+    <!-- Page header -->
+    <header class="mb-12 border-b border-border pb-10">
+      <p class="text-xs font-medium text-ink-muted uppercase tracking-widest mb-3">Legal</p>
+      <h1 class="font-display font-bold text-4xl md:text-5xl text-ink tracking-display">
+        Privacy Policy
+      </h1>
+      <p class="text-sm text-ink-muted mt-3">Last updated: {lastUpdated}</p>
+    </header>
+
+    <!-- Content -->
+    <div class="prose max-w-2xl">
+      <p>
+        This privacy policy applies to chrisjbell.com and any associated products,
+        including the Kate AI job coaching agent ("Kate", "the Service"). Please read this
+        policy carefully to understand how information is collected, used, and protected.
+      </p>
+
+      <h2>Information Collected</h2>
+
+      <h3>Information you provide directly</h3>
+      <p>
+        When you use Kate or contact me through this site, you may provide information
+        including your name, email address, and details about your job search (such as
+        your resume, target roles, and interview experiences). This information is used
+        solely to provide the coaching service.
+      </p>
+
+      <h3>Conversation data</h3>
+      <p>
+        Kate is built on Anthropic's Claude. Conversations you have with Kate may be
+        processed by Anthropic in accordance with their privacy policy and terms of
+        service. I do not store full conversation transcripts independently, though
+        session context is maintained during active conversations.
+      </p>
+
+      <h3>Usage information</h3>
+      <p>
+        This site may collect standard usage information such as browser type, referring
+        pages, and pages visited. This data is used only in aggregate to understand how
+        the site is being used and is not linked to individual identities.
+      </p>
+
+      <h2>How Information Is Used</h2>
+      <p>
+        Information you provide is used to:
+      </p>
+      <ul>
+        <li>Deliver and improve the Kate coaching service</li>
+        <li>Respond to questions or requests you send directly</li>
+        <li>Understand aggregate usage patterns to improve the site</li>
+      </ul>
+      <p>
+        Your information is not sold, rented, or shared with third parties for marketing
+        purposes.
+      </p>
+
+      <h2>Data Retention</h2>
+      <p>
+        Personal information is retained only as long as necessary to provide the service
+        or respond to your request. You may request deletion of your data at any time by
+        contacting me directly.
+      </p>
+
+      <h2>Third-Party Services</h2>
+      <p>
+        Kate is built on Anthropic's Claude API. By using Kate, you acknowledge that your
+        conversation inputs are processed by Anthropic. Please review{' '}
+        <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener noreferrer">
+          Anthropic's Privacy Policy
+        </a>{' '}
+        to understand how they handle data.
+      </p>
+
+      <h2>Security</h2>
+      <p>
+        I take reasonable precautions to protect information from unauthorized access or
+        disclosure. However, no method of transmission over the internet is completely
+        secure, and I cannot guarantee absolute security.
+      </p>
+
+      <h2>Your Rights</h2>
+      <p>
+        You have the right to request access to, correction of, or deletion of any
+        personal information I hold about you. To exercise these rights, contact me using
+        the information below.
+      </p>
+
+      <h2>Changes to This Policy</h2>
+      <p>
+        This policy may be updated from time to time. Changes will be posted on this page
+        with a revised "last updated" date. Continued use of the site or services after
+        changes constitutes acceptance of the updated policy.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        For questions about this privacy policy or to make a data request, please contact:
+      </p>
+      <p>
+        <strong>Chris Bell</strong><br />
+        <a href="mailto:privacy@chrisjbell.com">privacy@chrisjbell.com</a>
+      </p>
+    </div>
+
+    <div class="py-8"></div>
+  </div>
+</BaseLayout>

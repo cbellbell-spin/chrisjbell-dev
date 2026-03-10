@@ -1,0 +1,83 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((entry) => ({
+    params: { slug: entry.id.replace(/\.md$/, '') },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { title, description, tagline, status, cta, privacyPolicy } = entry.data;
+const { Content } = await render(entry);
+
+const statusStyle =
+  status === 'Beta'
+    ? 'bg-accent-light text-accent'
+    : 'bg-border text-ink-muted';
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="py-16 md:py-24">
+    <!-- Back link -->
+    <a
+      href="/projects"
+      class="inline-flex items-center text-xs text-ink-muted hover:text-ink transition-colors duration-150 mb-12"
+    >
+      &larr; All projects
+    </a>
+
+    <!-- Project header -->
+    <header class="mb-12">
+      <div class="flex flex-wrap items-start gap-4 mb-5">
+        <h1 class="font-display font-bold text-5xl md:text-7xl text-ink tracking-display">
+          {title}
+        </h1>
+        <span class={`text-xs font-medium px-3 py-1 rounded-full self-start mt-3 md:mt-4 ${statusStyle}`}>
+          {status}
+        </span>
+      </div>
+
+      {tagline && (
+        <p class="text-xl md:text-2xl text-ink-muted leading-relaxed max-w-xl">
+          {tagline}
+        </p>
+      )}
+
+      {cta && (
+        <div class="mt-8">
+          <a
+            href={cta.href}
+            class="inline-flex items-center px-6 py-3 bg-accent text-white text-sm font-medium hover:bg-ink transition-colors duration-200"
+          >
+            {cta.text}
+          </a>
+        </div>
+      )}
+    </header>
+
+    <hr class="border-border mb-12" />
+
+    <!-- Markdown content -->
+    <div class="prose max-w-2xl">
+      <Content />
+    </div>
+
+    <!-- Footer links -->
+    {privacyPolicy && (
+      <div class="mt-16 pt-8 border-t border-border">
+        <a
+          href={privacyPolicy}
+          class="text-xs text-ink-muted hover:text-ink transition-colors duration-150"
+        >
+          Privacy Policy
+        </a>
+      </div>
+    )}
+
+    <div class="py-8"></div>
+  </div>
+</BaseLayout>

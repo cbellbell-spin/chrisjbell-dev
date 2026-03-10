@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About"
+  description="I build platform products — data infrastructure, fit-for-purpose data products, governance designed in rather than bolted on. Previously Oracle AdTech, MarTech, and health data at scale."
+>
+  <div class="py-16 md:py-24">
+    <!-- Page header -->
+    <header class="mb-16 border-b border-border pb-12">
+      <h1 class="font-display font-bold text-5xl md:text-7xl text-ink tracking-display">
+        About.
+      </h1>
+    </header>
+
+    <!-- Content grid -->
+    <div class="grid md:grid-cols-3 gap-12 md:gap-16">
+      <!-- Main narrative -->
+      <div class="md:col-span-2">
+        <div class="space-y-12">
+          <div>
+            <p class="text-ink-muted leading-relaxed">
+              I build platform products &mdash; the kind that sit underneath other teams' work
+              and have to be right in order for anything downstream to be trusted. Data
+              infrastructure, fit-for-purpose data products, governance designed in rather than
+              bolted on. The job is getting the foundation solid enough that the applications on
+              top can move fast, without knocking the building down in the process.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display font-bold text-2xl text-ink mb-4">
+              At Oracle
+            </h2>
+            <p class="text-ink-muted leading-relaxed mb-4">
+              I did that twice, in different industries, at scale. First for a $200M+ AdTech
+              and MarTech business &mdash; multi-source marketing signals that had to be
+              harmonized, resolved, and made trustworthy enough to build decisioning products
+              on. Then for a $200M+ health data platform following Oracle's acquisition of
+              Cerner. Health data is a harder version of the same problem: clinical records,
+              lab results, claims, pharmacy data, each arriving from a different system, in a
+              different format, with a different definition of the same field. Before any of it
+              is worth building on, it has to be made coherent.
+            </p>
+            <p class="text-ink-muted leading-relaxed">
+              The architecture challenge is familiar. The reason it matters is not &mdash; a bad
+              marketing audience wastes money; unreliable clinical data affects care decisions.
+              Same lens, different domain, meaningfully higher stakes.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display font-bold text-2xl text-ink mb-4">
+              Building Organizations
+            </h2>
+            <p class="text-ink-muted leading-relaxed">
+              Leading PM organizations of upwards of forty people taught me that the technical
+              work is a small fraction of the real work. The real work is alignment &mdash; and
+              I mean actual alignment, not consensus, which is slower and usually wrong.
+              Alignment to the customers' real, hard problems, and alignment with Dev, Sales,
+              and Compliance on what we're doing and why. It's helping people grow into harder
+              problems, act with more autonomy, and step into leadership they didn't know they
+              had. And increasingly, it's change management: how you bring an organization
+              through a meaningful shift without losing the people who are most skeptical and
+              most valuable.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display font-bold text-2xl text-ink mb-4">
+              The Gap That Matters
+            </h2>
+            <p class="text-ink-muted leading-relaxed mb-4">
+              Enterprise software is littered with technically sound products that didn't take
+              because the organization couldn't absorb them. Whether a SaaS platform actually
+              succeeds is at least as much a function of change management as the technology
+              &mdash; sometimes more.
+            </p>
+            <p class="text-ink-muted leading-relaxed">
+              That dynamic is only getting sharper. The gap between what AI can do and what
+              most organizations can actually put to work isn't capability. It's trust,
+              literacy, and the willingness to redesign workflows that used to work well enough.
+              That's a product and organizational problem more than a technical one, and it's
+              where platform thinking and change management experience start to converge in ways
+              I find worth paying attention to.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-border">
+            <p class="text-ink-muted leading-relaxed">
+              I like building things. This site is one small example. The problems above are
+              the bigger ones.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="md:border-l md:border-border md:pl-10">
+        <div class="sticky top-8 space-y-10">
+          <div>
+            <h3 class="text-xs font-medium text-ink-muted uppercase tracking-widest mb-4">
+              Connect
+            </h3>
+            <a
+              href="https://linkedin.com/in/chrisjbell"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center text-sm text-accent hover:text-ink transition-colors duration-150"
+            >
+              LinkedIn &rarr;
+            </a>
+          </div>
+
+          <div>
+            <h3 class="text-xs font-medium text-ink-muted uppercase tracking-widest mb-4">
+              Currently Building
+            </h3>
+            <a
+              href="/projects/kate"
+              class="font-display font-bold text-lg text-ink hover:text-accent transition-colors duration-150 block"
+            >
+              Kate
+            </a>
+            <p class="text-xs text-ink-muted mt-1">AI job coaching agent</p>
+          </div>
+
+          <div>
+            <h3 class="text-xs font-medium text-ink-muted uppercase tracking-widest mb-4">
+              Based In
+            </h3>
+            <p class="text-sm text-ink-muted">San Francisco, CA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

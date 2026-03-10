@@ -1,17 +1,87 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Chris Bell"
+  description="Senior product leader in AI, data platforms, and martech/adtech. Building AI products that actually work."
+>
+  <!-- Hero -->
+  <section class="pt-20 pb-16 md:pt-28 md:pb-24">
+    <h1
+      class="font-display font-bold text-5xl md:text-7xl lg:text-8xl text-ink leading-tight tracking-display mb-8 max-w-3xl"
+    >
+      Building at the<br />frontier of AI.
+    </h1>
+    <p class="text-lg md:text-xl text-ink-muted leading-relaxed max-w-lg">
+      I'm Chris Bell &mdash; a senior product leader who thinks in systems and builds in code.
+      My work spans AI products, data platforms, and martech/adtech.
+    </p>
+  </section>
+
+  <!-- Featured Project -->
+  <section class="py-12 border-t border-border">
+    <p class="text-xs font-medium text-ink-muted uppercase tracking-widest mb-8">
+      Featured Project
+    </p>
+
+    <div class="bg-surface border border-border p-8 md:p-12 group hover:border-ink-muted transition-colors duration-200">
+      <div class="flex items-start justify-between mb-5">
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-ink">
+          Kate
+        </h2>
+        <span class="bg-accent-light text-accent text-xs font-medium px-3 py-1 rounded-full shrink-0 ml-4 mt-2">
+          Beta
+        </span>
+      </div>
+
+      <p class="text-ink-muted text-lg leading-relaxed mb-8 max-w-2xl">
+        An AI job coaching agent built on Anthropic's Claude. Kate guides job seekers
+        through structured interview prep, resume alignment, and company research &mdash;
+        using frameworks like STAR and the Who method.
+      </p>
+
+      <a
+        href="/projects/kate"
+        class="inline-flex items-center text-sm font-medium text-accent hover:text-ink transition-colors duration-150"
+      >
+        Learn more &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- Navigation links -->
+  <section class="py-12 border-t border-border">
+    <div class="grid md:grid-cols-2 gap-6">
+      <a href="/about" class="group block border border-border bg-surface p-8 hover:border-ink-muted transition-colors duration-200">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="font-display font-bold text-2xl text-ink group-hover:text-accent transition-colors duration-200">
+            About
+          </h3>
+          <span class="text-ink-muted text-sm group-hover:translate-x-1 transition-transform duration-150">
+            &rarr;
+          </span>
+        </div>
+        <p class="text-sm text-ink-muted leading-relaxed">
+          Background, focus, and what I've been building across three chapters of a product career.
+        </p>
+      </a>
+
+      <a href="/projects" class="group block border border-border bg-surface p-8 hover:border-ink-muted transition-colors duration-200">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="font-display font-bold text-2xl text-ink group-hover:text-accent transition-colors duration-200">
+            Projects
+          </h3>
+          <span class="text-ink-muted text-sm group-hover:translate-x-1 transition-transform duration-150">
+            &rarr;
+          </span>
+        </div>
+        <p class="text-sm text-ink-muted leading-relaxed">
+          AI agents, data tools, and products I'm actively building or have shipped.
+        </p>
+      </a>
+    </div>
+  </section>
+
+  <div class="py-12"></div>
+</BaseLayout>
