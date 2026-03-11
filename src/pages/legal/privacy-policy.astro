@@ -1,118 +1,110 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-
-const lastUpdated = 'March 2025';
 ---
 
 <BaseLayout
   title="Privacy Policy"
-  description="Privacy policy for chrisjbell.com and the Kate AI job coaching agent."
+  description="Privacy policy for chrisjbell.dev and the apps and tools developed by Chris J. Bell."
 >
   <div class="py-16 md:py-20">
+
     <!-- Page header -->
     <header class="mb-12 border-b border-border pb-10">
       <p class="text-xs font-medium text-ink-muted uppercase tracking-widest mb-3">Legal</p>
       <h1 class="font-display font-bold text-4xl md:text-5xl text-ink tracking-display">
         Privacy Policy
       </h1>
-      <p class="text-sm text-ink-muted mt-3">Last updated: {lastUpdated}</p>
+      <p class="text-sm text-ink-muted mt-3">Effective date: March 2026 &nbsp;&middot;&nbsp; Last updated: March 2026</p>
     </header>
 
-    <!-- Content -->
+    <!-- Main content -->
     <div class="prose max-w-2xl">
-      <p>
-        This privacy policy applies to chrisjbell.com and any associated products,
-        including the Kate AI job coaching agent ("Kate", "the Service"). Please read this
-        policy carefully to understand how information is collected, used, and protected.
-      </p>
 
-      <h2>Information Collected</h2>
+      <p>This policy describes how I collect, use, and handle information across the apps and tools I develop and publish as an independent developer. Where an app has practices that differ from or add to this baseline, those specifics are called out in the app-specific section below.</p>
 
-      <h3>Information you provide directly</h3>
-      <p>
-        When you use Kate or contact me through this site, you may provide information
-        including your name, email address, and details about your job search (such as
-        your resume, target roles, and interview experiences). This information is used
-        solely to provide the coaching service.
-      </p>
+      <h2>1. Who I Am</h2>
+      <p>These apps are developed and operated by Chris J. Bell, an independent software developer based in the San Francisco Bay Area. You can reach me at the contact information at the bottom of this page.</p>
 
-      <h3>Conversation data</h3>
-      <p>
-        Kate is built on Anthropic's Claude. Conversations you have with Kate may be
-        processed by Anthropic in accordance with their privacy policy and terms of
-        service. I do not store full conversation transcripts independently, though
-        session context is maintained during active conversations.
-      </p>
-
-      <h3>Usage information</h3>
-      <p>
-        This site may collect standard usage information such as browser type, referring
-        pages, and pages visited. This data is used only in aggregate to understand how
-        the site is being used and is not linked to individual identities.
-      </p>
-
-      <h2>How Information Is Used</h2>
-      <p>
-        Information you provide is used to:
-      </p>
+      <h2>2. What Data I Collect</h2>
+      <p>The data I collect depends on which app you are using. Across all apps, I limit collection to what is necessary for the app to function. I do not sell your data. I do not use your data for advertising.</p>
+      <p>Data types that may be collected depending on the app include:</p>
       <ul>
-        <li>Deliver and improve the Kate coaching service</li>
-        <li>Respond to questions or requests you send directly</li>
-        <li>Understand aggregate usage patterns to improve the site</li>
+        <li>Information you provide directly, such as text inputs, uploaded documents, or account details</li>
+        <li>Data retrieved from third-party platforms you explicitly authorize (such as Whoop or Apple Health), accessed only through official OAuth flows with your consent</li>
+        <li>Basic usage information, such as error logs, to help me diagnose and improve the app</li>
       </ul>
-      <p>
-        Your information is not sold, rented, or shared with third parties for marketing
-        purposes.
-      </p>
+      <p>I do not knowingly collect data from children under 13.</p>
 
-      <h2>Data Retention</h2>
-      <p>
-        Personal information is retained only as long as necessary to provide the service
-        or respond to your request. You may request deletion of your data at any time by
-        contacting me directly.
-      </p>
+      <h2>3. How I Use Your Data</h2>
+      <p>Data is used solely to deliver the features you are using. Specifically:</p>
+      <ul>
+        <li>To process your requests and return results within the app</li>
+        <li>To pass relevant data to third-party AI or API services that power app features, as described below</li>
+        <li>To maintain the security and performance of the app</li>
+      </ul>
+      <p>I do not use your data to train AI models, build marketing profiles, or share with third parties for their own purposes.</p>
 
-      <h2>Third-Party Services</h2>
-      <p>
-        Kate is built on Anthropic's Claude API. By using Kate, you acknowledge that your
-        conversation inputs are processed by Anthropic. Please review{' '}
-        <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener noreferrer">
-          Anthropic's Privacy Policy
-        </a>{' '}
-        to understand how they handle data.
-      </p>
+      <h2>4. Third-Party Services</h2>
+      <p>My apps rely on the following third-party services, each of which has its own privacy practices:</p>
+      <ul>
+        <li><strong>Anthropic:</strong> Some apps use the Anthropic API to power AI features. Content you submit may be processed by Anthropic's systems in accordance with <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic's Privacy Policy</a> and <a href="https://www.anthropic.com/legal/usage-policy" target="_blank" rel="noopener">Usage Policy</a>.</li>
+        <li><strong>Supabase:</strong> Some apps use Supabase for data storage. Data stored in Supabase is subject to <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.</li>
+        <li><strong>Apple:</strong> Apps distributed through the App Store are subject to <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>. Each app's data practices are disclosed in the App Store privacy nutrition labels.</li>
+        <li><strong>Whoop:</strong> Apps that connect to your Whoop account do so via Whoop's official OAuth flow. Whoop's data practices are governed by <a href="https://www.whoop.com/privacy/" target="_blank" rel="noopener">Whoop's Privacy Policy</a>.</li>
+      </ul>
 
-      <h2>Security</h2>
-      <p>
-        I take reasonable precautions to protect information from unauthorized access or
-        disclosure. However, no method of transmission over the internet is completely
-        secure, and I cannot guarantee absolute security.
-      </p>
+      <h2>5. Data Retention</h2>
+      <p>I retain data only as long as necessary to provide the service. If you stop using an app, data associated with your account may be retained for up to 90 days before deletion unless a shorter period applies or you request deletion sooner. Some apps operate without persistent storage, processing data in real time without retaining it after the session ends. App-specific retention details are noted in the sections below where relevant.</p>
 
-      <h2>Your Rights</h2>
-      <p>
-        You have the right to request access to, correction of, or deletion of any
-        personal information I hold about you. To exercise these rights, contact me using
-        the information below.
-      </p>
+      <h2>6. Your Rights</h2>
+      <p>Depending on where you live, you may have rights including the ability to access, correct, delete, or export your data. California residents have additional rights under the California Consumer Privacy Act (CCPA), including the right to know what personal information is collected, the right to delete it, and the right to opt out of its sale (though I do not sell data). To exercise any of these rights, contact me using the information below.</p>
 
-      <h2>Changes to This Policy</h2>
-      <p>
-        This policy may be updated from time to time. Changes will be posted on this page
-        with a revised "last updated" date. Continued use of the site or services after
-        changes constitutes acceptance of the updated policy.
-      </p>
+      <h2>7. Security</h2>
+      <p>I take reasonable measures to protect your data, including using encrypted connections and following secure development practices. No system is completely secure, and I cannot guarantee the absolute security of your information.</p>
 
-      <h2>Contact</h2>
-      <p>
-        For questions about this privacy policy or to make a data request, please contact:
-      </p>
-      <p>
-        <strong>Chris Bell</strong><br />
-        <a href="mailto:privacy@chrisjbell.com">privacy@chrisjbell.com</a>
-      </p>
+      <h2>8. Changes to This Policy</h2>
+      <p>I may update this policy from time to time. When I do, the effective date at the top of this page will change. Continued use of an app after a policy update constitutes acceptance of the updated terms.</p>
+
+    </div>
+
+    <!-- App-specific sections -->
+    <div class="max-w-2xl mt-16">
+      <h2 class="font-display font-bold text-2xl text-ink tracking-display mb-2">App-Specific Details</h2>
+      <p class="text-ink-muted mb-10">The following sections describe data practices specific to individual apps. These supplement and do not replace the general policy above.</p>
+
+      <!-- Kate -->
+      <div class="border-l-2 border-ink pl-6 py-1 mb-8">
+        <h3 class="font-display font-semibold text-lg text-ink mb-4">Kate (AI Career Coach)</h3>
+        <div class="space-y-3 text-ink-muted leading-relaxed text-sm">
+          <p><strong class="text-ink">What Kate collects:</strong> Kate is an AI-powered career coaching assistant. To function, Kate processes information you share about your job search, including resumes, job descriptions, interview notes, and other career-related content you choose to provide.</p>
+          <p><strong class="text-ink">How Kate uses your data:</strong> Content you share is passed to the Anthropic API to generate coaching responses. Kate may also store files and session context locally within the Cowork environment on your own machine to support continuity across sessions. In this configuration, you control local storage directly.</p>
+          <p><strong class="text-ink">Third-party AI processing:</strong> Kate relies on Anthropic's Claude models. Content you submit is processed by Anthropic in accordance with their privacy policy. I do not retain copies of API conversations on my own servers.</p>
+          <p><strong class="text-ink">Retention:</strong> Locally stored files remain until you delete them. No career or personal data is retained on my servers.</p>
+        </div>
+      </div>
+
+      <!-- Whoop MCP -->
+      <div class="border-l-2 border-ink pl-6 py-1 mb-8">
+        <h3 class="font-display font-semibold text-lg text-ink mb-4">Whoop MCP Server</h3>
+        <div class="space-y-3 text-ink-muted leading-relaxed text-sm">
+          <p><strong class="text-ink">What this app accesses:</strong> This tool connects to your Whoop account via Whoop's OAuth 2.0 authorization flow. With your permission, it retrieves health and fitness data including recovery scores, sleep data, heart rate metrics, and strain data, based on the scopes you approve during authorization.</p>
+          <p><strong class="text-ink">How your health data is used:</strong> Data retrieved from Whoop is passed in real time to an AI model (via the Anthropic API) to power queries and insights you request. This data is processed in session and is not stored on my servers after your request is fulfilled.</p>
+          <p><strong class="text-ink">Sensitive data notice:</strong> Whoop data is biometric and health-related. I treat it with heightened care. It is not used for any purpose other than responding to your direct requests within the app, and it is not shared with any party other than Anthropic for request processing.</p>
+          <p><strong class="text-ink">Revoking access:</strong> You can revoke this app's access to your Whoop data at any time through your Whoop account settings under Connected Apps.</p>
+          <p><strong class="text-ink">Retention:</strong> No Whoop data is retained after a session ends. I do not log or store health metrics.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="max-w-2xl mt-12 pt-10 border-t border-border">
+      <h2 class="font-display font-bold text-2xl text-ink tracking-display mb-2">Contact</h2>
+      <p class="text-ink-muted mb-8">Questions about this policy or requests to exercise your data rights can be directed to <strong class="text-ink">Chris J. Bell</strong> using the form below.</p>
+      <div data-tf-live="01KKDEJ150EVQ14ZMVJDNWSPEH"></div>
     </div>
 
     <div class="py-8"></div>
   </div>
 </BaseLayout>
+
+<script is:inline src="//embed.typeform.com/next/embed.js"></script>
