@@ -6,7 +6,7 @@ status: "Beta"
 order: 1
 cta:
   text: "Request Access"
-  href: "#"
+  href: "/projects/kate/request-access"
 privacyPolicy: "/legal/privacy-policy"
 ---
 
