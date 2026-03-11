@@ -47,16 +47,6 @@ const statusStyle =
         </p>
       )}
 
-      {cta && (
-        <div class="mt-8">
-          <a
-            href={cta.href}
-            class="inline-flex items-center px-6 py-3 bg-accent text-white text-sm font-medium hover:bg-ink transition-colors duration-200"
-          >
-            {cta.text}
-          </a>
-        </div>
-      )}
     </header>
 
     <hr class="border-border mb-12" />
@@ -65,6 +55,18 @@ const statusStyle =
     <div class="prose max-w-2xl">
       <Content />
     </div>
+
+    <!-- CTA -->
+    {cta && (
+      <div class="mt-12">
+        <a
+          href={cta.href}
+          class="inline-flex items-center px-6 py-3 bg-accent text-white text-sm font-medium hover:bg-ink transition-colors duration-200"
+        >
+          {cta.text}
+        </a>
+      </div>
+    )}
 
     <!-- Footer links -->
     {privacyPolicy && (
