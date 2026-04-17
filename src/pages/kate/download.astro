@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const REPO_NAME = 'cbellbell-spin/kate-career-coach';
+const FALLBACK_URL = 'https://github.com/cbellbell-spin/kate-career-coach/releases';
+
+interface Release {
+  tag_name: string;
+  name: string;
+  published_at: string;
+  body: string;
+  assets: { name: string; browser_download_url: string }[];
+}
+
+let releases: Release[] = [];
+let latestRelease: Release | null = null;
+let downloadUrl: string = FALLBACK_URL;
+let apiError = false;
+
+try {
+  const response = await fetch(
+    `https://api.github.com/repos/${REPO_NAME}/releases?per_page=5`,
+    {
+      headers: {
+        Accept: 'application/vnd.github+json',
+        'User-Agent': 'chrisjbell.dev'
+      }
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(`GitHub API responded with ${response.status}`);
+  }
+
+  releases = await response.json();
+
+  if (releases.length > 0) {
+    latestRelease = releases[0];
+    const zipAsset = latestRelease.assets?.find((a) => a.name.endsWith('.zip'));
+    downloadUrl = zipAsset?.browser_download_url ?? FALLBACK_URL;
+  }
+} catch (err) {
+  apiError = true;
+  console.error('Failed to fetch GitHub releases:', err);
+}
+
+function formatDate(dateString: string): string {
+  return new Date(dateString).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
+
+function renderMarkdown(text: string): string {
+  if (!text) return '';
+  return text
+    .replace(/^### (.*$)/gim, '<h3 class="text-lg font-semibold mt-6 mb-2">$1</h3>')
+    .replace(/^## (.*$)/gim, '<h2 class="text-xl font-semibold mt-8 mb-3">$1</h2>')
+    .replace(/^# (.*$)/gim, '<h1 class="text-2xl font-bold mt-8 mb-4">$1</h1>')
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+    .replace(/^- (.*$)/gim, '<li class="ml-4">$1</li>')
+    .replace(/\n\n/g, '</p><p class="my-3">')
+    .replace(/`([^`]+)`/g, '<code class="bg-surface px-1.5 py-0.5 text-sm border border-border">$1</code>');
+}
+---
+
+<BaseLayout
+  title="Download Kate"
+  description="Download the latest version of Kate, an AI coaching agent for senior executives."
+>
+  <div class="py-16 md:py-24">
+    <a
+      href="/projects/kate"
+      class="inline-flex items-center text-xs text-ink-muted hover:text-ink transition-colors duration-150 mb-12"
+    >
+      &larr; Back to Kate
+    </a>
+
+    <header class="mb-12 max-w-xl">
+      <h1 class="font-display font-bold text-4xl md:text-5xl text-ink tracking-display mb-4">
+        Download Kate
+      </h1>
+      <p class="text-lg text-ink-muted leading-relaxed">
+        Get the latest release and start using Kate to accelerate your job search.
+      </p>
+    </header>
+
+    {apiError && (
+      <div class="bg-surface border border-border p-6 mb-8">
+        <p class="text-ink-muted mb-4">
+          Could not fetch the latest release from GitHub.
+        </p>
+        <a
+          href={FALLBACK_URL}
+          class="inline-flex items-center bg-accent text-white font-medium px-5 py-2.5 hover:bg-ink transition-colors duration-150"
+        >
+          Download Latest Release
+        </a>
+      </div>
+    )}
+
+    {!apiError && latestRelease && (
+      <div class="bg-surface border border-border p-8 md:p-12 mb-12">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <h2 class="font-display font-bold text-2xl text-ink">
+                {latestRelease.name || latestRelease.tag_name}
+              </h2>
+              <span class="bg-accent-light text-accent text-xs font-medium px-2.5 py-1 rounded-full">
+                Latest
+              </span>
+            </div>
+            <p class="text-sm text-ink-muted">
+              Released {formatDate(latestRelease.published_at)}
+            </p>
+          </div>
+          <a
+            href={downloadUrl}
+            class="inline-flex items-center bg-accent text-white font-medium px-6 py-3 hover:bg-ink transition-colors duration-150 shrink-0"
+          >
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download .zip
+          </a>
+        </div>
+      </div>
+    )}
+
+    {releases.length > 0 && (
+      <section>
+        <h2 class="font-display font-bold text-2xl text-ink mb-6">Changelog</h2>
+        <div class="space-y-8">
+          {releases.map((release) => (
+            <div class="border-b border-border pb-8 last:border-0">
+              <div class="flex items-baseline justify-between mb-3">
+                <h3 class="font-display font-semibold text-lg text-ink">
+                  {release.name || release.tag_name}
+                </h3>
+                <time class="text-sm text-ink-muted">
+                  {formatDate(release.published_at)}
+                </time>
+              </div>
+              {release.body && (
+                <div
+                  class="text-ink-muted text-sm leading-relaxed prose-sm"
+                  set:html={renderMarkdown(release.body)}
+                />
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</BaseLayout>
