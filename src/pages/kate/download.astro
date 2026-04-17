@@ -130,6 +130,28 @@ function renderMarkdown(text: string): string {
       </div>
     )}
 
+    <section class="mb-12">
+      <h2 class="font-display font-bold text-2xl text-ink mb-4">Getting Started</h2>
+      <div class="bg-surface border border-border p-6">
+        <p class="text-ink-muted mb-4">
+          Download our getting started guide to learn how to set up and use Kate effectively.
+        </p>
+        <a
+          href="/kate-getting-started-v2.docx"
+          class="inline-flex items-center bg-surface border border-border text-ink font-medium px-5 py-2.5 hover:bg-ink-muted/10 transition-colors duration-150"
+          download
+        >
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+          Download Getting Started Guide
+        </a>
+        <p class="text-xs text-ink-muted mt-3">
+          Microsoft Word document (.docx) - compatible with Word, Google Docs, and other word processors.
+        </p>
+      </div>
+    </section>
+
     {releases.length > 0 && (
       <section>
         <h2 class="font-display font-bold text-2xl text-ink mb-6">Changelog</h2>
