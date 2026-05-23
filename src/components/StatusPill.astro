@@ -1,0 +1,18 @@
+---
+interface Props {
+  status: string;
+}
+
+const { status } = Astro.props;
+
+const styles: Record<string, string> = {
+  Beta: 'border-gold/60 bg-gold-light text-accent',
+  'Open Source': 'border-slate/30 bg-slate/10 text-slate',
+};
+
+const style = styles[status] ?? 'border-border bg-soft text-ink-muted';
+---
+
+<span class={`inline-flex w-fit items-center rounded-full border px-3 py-1 text-xs font-bold ${style}`}>
+  {status}
+</span>

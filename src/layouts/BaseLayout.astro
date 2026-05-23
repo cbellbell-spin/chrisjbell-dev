@@ -30,11 +30,10 @@ const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -42,16 +41,14 @@ const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
   <body>
     <script async src="https://cdn.vercel-analytics.com/analytics.js"></script>
     <div class="min-h-screen flex flex-col">
-      <header class="border-b border-border">
+      <header class="sticky top-0 z-20 border-b border-border bg-bg/90 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-6 md:px-10">
           <Nav />
         </div>
       </header>
 
       <main class="flex-1">
-        <div class="max-w-6xl mx-auto px-6 md:px-10">
-          <slot />
-        </div>
+        <slot />
       </main>
 
       <Footer />

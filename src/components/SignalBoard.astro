@@ -1,0 +1,50 @@
+<aside
+  class="overflow-hidden rounded-[8px] border border-border bg-surface/85 shadow-[0_22px_70px_rgba(26,26,26,0.09)]"
+  aria-label="Platform work model"
+>
+  <div class="border-b border-border px-5 py-5">
+    <p class="text-[13px] font-bold uppercase text-accent">Working model</p>
+    <h2 class="mt-2 font-display text-3xl font-semibold leading-tight text-ink">
+      From messy systems to usable products.
+    </h2>
+  </div>
+
+  <div class="divide-y divide-border">
+    {
+      [
+        {
+          label: 'Make the data trustworthy',
+          copy: 'Resolve definitions, sources, governance, and quality so teams can build on solid ground.',
+          value: '01',
+          color: 'text-accent',
+        },
+        {
+          label: 'Shape it into product systems',
+          copy: 'Turn the foundation into workflows, tools, and decisions people can actually use.',
+          value: '02',
+          color: 'text-gold',
+        },
+        {
+          label: 'Carry it into the organization',
+          copy: 'Build the alignment, literacy, and change muscle that make adoption possible.',
+          value: '03',
+          color: 'text-slate',
+        },
+      ].map((item) => (
+        <div class="grid gap-4 p-5 sm:grid-cols-[4rem_minmax(0,1fr)]">
+          <div class={`font-display text-4xl font-semibold leading-none ${item.color}`}>
+            {item.value}
+          </div>
+          <div>
+            <h3 class="font-display text-2xl font-semibold leading-tight text-ink">
+              {item.label}
+            </h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-muted">
+              {item.copy}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</aside>

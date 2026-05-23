@@ -7,22 +7,22 @@ const navLinks = [
 const currentPath = Astro.url.pathname;
 ---
 
-<nav class="flex items-center justify-between py-5">
+<nav class="flex items-center justify-between gap-6 py-5">
   <a
     href="/"
-    class="font-display font-semibold text-lg text-ink hover:text-accent transition-colors duration-150"
+    class="font-display text-[1.35rem] font-semibold leading-none text-ink hover:text-accent transition-colors duration-150"
   >
     Chris J. Bell
   </a>
 
-  <ul class="flex items-center gap-8" role="list">
+  <ul class="flex items-center gap-5 md:gap-8" role="list">
     {navLinks.map(({ href, label }) => (
       <li>
         <a
           href={href}
           class={`text-sm transition-colors duration-150 ${
             currentPath.startsWith(href)
-              ? 'text-ink font-medium'
+              ? 'text-accent font-semibold'
               : 'text-ink-muted hover:text-ink'
           }`}
         >

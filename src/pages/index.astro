@@ -1,90 +1,167 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import StatusPill from '../components/StatusPill.astro';
 ---
 
 <BaseLayout
   title="Chris Bell"
   description="I build the data infrastructure layer that other products depend on — and I think a lot about what it takes for organizations to actually use what gets built."
 >
-  <!-- Hero -->
-  <section class="pt-20 pb-16 md:pt-28 md:pb-24">
-    <p class="text-sm font-medium text-ink-muted mb-6">
-      Chris J. Bell
-    </p>
-    <h1
-      class="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-ink leading-tight tracking-display mb-8 max-w-2xl"
+  <section class="relative overflow-hidden border-b border-border">
+    <div
+      class="absolute inset-0 opacity-80"
+      style="background-image: linear-gradient(90deg, rgba(221,211,198,.45) 1px, transparent 1px), linear-gradient(rgba(221,211,198,.45) 1px, transparent 1px); background-size: 72px 72px;"
     >
-      Platform products.<br />Built to be trusted.
-    </h1>
-    <p class="text-lg md:text-xl text-ink-muted leading-relaxed max-w-xl">
-      I build the data infrastructure layer that other products depend on &mdash; and I think
-      a lot about what it takes for organizations to actually use what gets built.
-    </p>
+    </div>
+    <div class="relative mx-auto grid min-h-[calc(100vh-73px)] max-w-6xl items-center px-6 py-16 md:px-10 md:py-20">
+      <div class="grid items-center gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(340px,.72fr)] lg:gap-16">
+        <div>
+          <p class="mb-5 text-[13px] font-bold uppercase text-accent">
+            AI, data platforms, product leadership
+          </p>
+          <h1 class="font-display text-[4rem] font-semibold leading-[0.9] text-ink md:text-[6.75rem]">
+            Chris J. Bell
+          </h1>
+          <p class="mt-7 max-w-2xl text-xl leading-relaxed text-ink-muted md:text-2xl">
+            I build platform products that make complex data trustworthy enough for real work,
+            and help organizations absorb the change that follows.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href="/projects"
+              class="inline-flex min-h-12 items-center rounded-[6px] border border-accent bg-accent px-5 text-sm font-bold text-surface transition-colors duration-150 hover:bg-accent-dark"
+            >
+              View projects
+            </a>
+            <a
+              href="/about"
+              class="inline-flex min-h-12 items-center rounded-[6px] border border-accent bg-surface/60 px-5 text-sm font-bold text-accent transition-colors duration-150 hover:bg-accent-light"
+            >
+              Read about the work
+            </a>
+          </div>
+        </div>
+
+        <aside class="rounded-[8px] border border-border bg-surface/85 p-6 shadow-[0_22px_70px_rgba(26,26,26,0.08)]">
+          <p class="text-[13px] font-bold uppercase text-accent">Focus</p>
+          <p class="mt-3 font-display text-3xl font-semibold leading-tight text-ink">
+            Data trust, product systems, organizational adoption.
+          </p>
+          <a
+            href="/about"
+            class="mt-6 inline-flex text-sm font-bold text-accent transition-colors duration-150 hover:text-ink"
+          >
+            Read how I work &rarr;
+          </a>
+        </aside>
+      </div>
+    </div>
   </section>
 
-  <!-- Featured Project -->
-  <section class="py-12 border-t border-border">
-    <p class="text-xs font-medium text-ink-muted uppercase tracking-widest mb-8">
-      Featured Project
-    </p>
-
-    <div class="bg-surface border border-border p-8 md:p-12 group hover:border-ink-muted transition-colors duration-200">
-      <div class="flex items-start justify-between mb-5">
-        <h2 class="font-display font-bold text-4xl md:text-5xl text-ink">
-          Kate
-        </h2>
-        <span class="bg-accent-light text-accent text-xs font-medium px-3 py-1 rounded-full shrink-0 ml-4 mt-2">
-          Beta
-        </span>
+  <section class="border-b border-border py-16 md:py-20">
+    <div class="mx-auto max-w-6xl px-6 md:px-10">
+      <div class="mb-10 grid gap-8 md:grid-cols-[minmax(0,.7fr)_minmax(0,.75fr)] md:items-start">
+        <div>
+          <p class="mb-4 text-[13px] font-bold uppercase text-accent">Featured project</p>
+          <h2 class="font-display text-5xl font-semibold leading-none text-ink md:text-7xl">
+            Kate brings method to career coaching.
+          </h2>
+        </div>
+        <p class="max-w-xl text-lg leading-relaxed text-ink-muted">
+          The homepage gives Kate more presence without turning the whole site into a product
+          landing page. The portfolio still reads as Chris first, with projects as proof.
+        </p>
       </div>
 
-      <p class="text-ink-muted text-lg leading-relaxed mb-8 max-w-2xl">
-        An AI job coaching agent built on Anthropic's Claude. Kate guides job seekers
-        through structured interview prep, resume alignment, and company research &mdash;
-        using frameworks like STAR and the Who method.
-      </p>
-
-      <a
-        href="/projects/kate"
-        class="inline-flex items-center text-sm font-medium text-accent hover:text-ink transition-colors duration-150"
-      >
-        Learn more &rarr;
-      </a>
+      <article class="grid overflow-hidden rounded-[8px] border border-border bg-surface md:grid-cols-[minmax(0,.65fr)_minmax(0,1fr)]">
+        <div class="flex min-h-72 flex-col justify-between bg-accent p-8 text-surface md:p-10">
+          <div class="font-display text-8xl font-semibold leading-none md:text-[8rem]">Kate</div>
+          <p class="max-w-sm text-sm leading-relaxed text-surface/80">
+            AI coaching built around structured assessment, role fit, interview prep, and a
+            persistent working memory.
+          </p>
+        </div>
+        <div class="flex flex-col justify-center p-8 md:p-12">
+          <StatusPill status="Beta" />
+          <h3 class="mt-6 max-w-2xl font-display text-4xl font-semibold leading-tight text-ink md:text-5xl">
+            Career coaching with rigor, not generic encouragement.
+          </h3>
+          <p class="mt-5 max-w-2xl text-lg leading-relaxed text-ink-muted">
+            Kate interviews you, keeps structured session files, and helps turn your actual
+            experience into clear positioning for the roles you are pursuing.
+          </p>
+          <a
+            href="/projects/kate"
+            class="mt-7 text-sm font-bold text-accent transition-colors duration-150 hover:text-ink"
+          >
+            Explore Kate &rarr;
+          </a>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- Navigation links -->
-  <section class="py-12 border-t border-border">
-    <div class="grid md:grid-cols-2 gap-6">
-      <a href="/about" class="group block border border-border bg-surface p-8 hover:border-ink-muted transition-colors duration-200">
-        <div class="flex items-center justify-between mb-3">
-          <h3 class="font-display font-bold text-2xl text-ink group-hover:text-accent transition-colors duration-200">
-            About
-          </h3>
-          <span class="text-ink-muted text-sm group-hover:translate-x-1 transition-transform duration-150">
-            &rarr;
-          </span>
+  <section class="border-b border-border py-16 md:py-20">
+    <div class="mx-auto max-w-6xl px-6 md:px-10">
+      <div class="mb-10 grid gap-8 md:grid-cols-[minmax(0,.7fr)_minmax(0,.75fr)]">
+        <div>
+          <p class="mb-4 text-[13px] font-bold uppercase text-accent">Selected work</p>
+          <h2 class="font-display text-5xl font-semibold leading-none text-ink md:text-7xl">
+            Small systems with a point of view.
+          </h2>
         </div>
-        <p class="text-sm text-ink-muted leading-relaxed">
-          Background, focus, and what I've been building across three chapters of a product career.
+        <p class="max-w-xl text-lg leading-relaxed text-ink-muted">
+          AI agents, data tools, and product experiments that start from a concrete workflow
+          instead of a generic demo.
         </p>
-      </a>
+      </div>
 
-      <a href="/projects" class="group block border border-border bg-surface p-8 hover:border-ink-muted transition-colors duration-200">
-        <div class="flex items-center justify-between mb-3">
-          <h3 class="font-display font-bold text-2xl text-ink group-hover:text-accent transition-colors duration-200">
-            Projects
-          </h3>
-          <span class="text-ink-muted text-sm group-hover:translate-x-1 transition-transform duration-150">
-            &rarr;
-          </span>
-        </div>
-        <p class="text-sm text-ink-muted leading-relaxed">
-          AI agents, data tools, and products I'm actively building or have shipped.
-        </p>
-      </a>
+      <div class="grid gap-5 md:grid-cols-3">
+        <a href="/projects/kate" class="group flex min-h-72 flex-col justify-between rounded-[8px] border border-border bg-surface p-7 transition-colors duration-150 hover:border-accent">
+          <div>
+            <div class="mb-5 flex items-center justify-between text-xs font-bold text-ink-muted">
+              <span>AI agent</span>
+              <span class="h-2.5 w-2.5 rounded-full bg-gold"></span>
+            </div>
+            <h3 class="font-display text-4xl font-semibold text-ink group-hover:text-accent">Kate</h3>
+            <p class="mt-4 text-sm leading-relaxed text-ink-muted">
+              A coaching agent for senior job seekers, built around fit assessment, story
+              development, research, and interview debriefs.
+            </p>
+          </div>
+          <span class="text-sm font-bold text-accent group-hover:text-ink">View project &rarr;</span>
+        </a>
+
+        <a href="/projects/whoop-mcp" class="group flex min-h-72 flex-col justify-between rounded-[8px] border border-border bg-surface p-7 transition-colors duration-150 hover:border-accent">
+          <div>
+            <div class="mb-5 flex items-center justify-between text-xs font-bold text-ink-muted">
+              <span>Open source</span>
+              <span class="h-2.5 w-2.5 rounded-full bg-slate"></span>
+            </div>
+            <h3 class="font-display text-4xl font-semibold text-ink group-hover:text-accent">Whoop MCP</h3>
+            <p class="mt-4 text-sm leading-relaxed text-ink-muted">
+              A local bridge between Whoop data and AI agents, exposing recovery, sleep,
+              strain, and workouts through typed MCP tools.
+            </p>
+          </div>
+          <span class="text-sm font-bold text-accent group-hover:text-ink">View project &rarr;</span>
+        </a>
+
+        <a href="/projects/cadence" class="group flex min-h-72 flex-col justify-between rounded-[8px] border border-border bg-surface p-7 transition-colors duration-150 hover:border-accent">
+          <div>
+            <div class="mb-5 flex items-center justify-between text-xs font-bold text-ink-muted">
+              <span>Training coach</span>
+              <span class="h-2.5 w-2.5 rounded-full bg-sage"></span>
+            </div>
+            <h3 class="font-display text-4xl font-semibold text-ink group-hover:text-accent">Cadence</h3>
+            <p class="mt-4 text-sm leading-relaxed text-ink-muted">
+              Strength programming delivered to your phone. Endurance coaching grounded in your recovery data.
+            </p>
+          </div>
+          <span class="text-sm font-bold text-accent group-hover:text-ink">View project &rarr;</span>
+        </a>
+      </div>
     </div>
   </section>
 
-  <div class="py-12"></div>
 </BaseLayout>

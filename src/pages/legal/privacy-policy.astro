@@ -6,15 +6,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   title="Privacy Policy"
   description="Privacy policy for chrisjbell.dev and the apps and tools developed by Chris J. Bell."
 >
-  <div class="py-16 md:py-20">
+  <div class="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
 
-    <!-- Page header -->
     <header class="mb-12 border-b border-border pb-10">
-      <p class="text-xs font-medium text-ink-muted uppercase tracking-widest mb-3">Legal</p>
-      <h1 class="font-display font-bold text-4xl md:text-5xl text-ink tracking-display">
+      <p class="mb-3 text-[13px] font-bold uppercase text-accent">Legal</p>
+      <h1 class="font-display text-5xl font-semibold leading-none text-ink md:text-7xl">
         Privacy Policy
       </h1>
-      <p class="text-sm text-ink-muted mt-3">Effective date: March 2026 &nbsp;&middot;&nbsp; Last updated: March 2026</p>
+      <p class="mt-3 text-sm text-ink-muted">Effective date: March 2026 &nbsp;&middot;&nbsp; Last updated: March 2026</p>
     </header>
 
     <!-- Main content -->
@@ -69,12 +68,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
     <!-- App-specific sections -->
     <div class="max-w-2xl mt-16">
-      <h2 class="font-display font-bold text-2xl text-ink tracking-display mb-2">App-Specific Details</h2>
+      <h2 class="mb-2 font-display text-3xl font-semibold text-ink">App-Specific Details</h2>
       <p class="text-ink-muted mb-10">The following sections describe data practices specific to individual apps. These supplement and do not replace the general policy above.</p>
 
       <!-- Kate -->
-      <div class="border-l-2 border-ink pl-6 py-1 mb-8">
-        <h3 class="font-display font-semibold text-lg text-ink mb-4">Kate (AI Career Coach)</h3>
+      <div class="border-l-2 border-accent pl-6 py-1 mb-8">
+        <h3 class="mb-4 font-display text-2xl font-semibold text-ink">Kate (AI Career Coach)</h3>
         <div class="space-y-3 text-ink-muted leading-relaxed text-sm">
           <p><strong class="text-ink">What Kate collects:</strong> Kate is an AI-powered career coaching assistant. To function, Kate processes information you share about your job search, including resumes, job descriptions, interview notes, and other career-related content you choose to provide.</p>
           <p><strong class="text-ink">How Kate uses your data:</strong> Content you share is passed to the Anthropic API to generate coaching responses. Kate may also store files and session context locally within the Cowork environment on your own machine to support continuity across sessions. In this configuration, you control local storage directly.</p>
@@ -84,8 +83,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </div>
 
       <!-- Whoop MCP -->
-      <div class="border-l-2 border-ink pl-6 py-1 mb-8">
-        <h3 class="font-display font-semibold text-lg text-ink mb-4">Whoop MCP Server</h3>
+      <div class="border-l-2 border-slate pl-6 py-1 mb-8">
+        <h3 class="mb-4 font-display text-2xl font-semibold text-ink">Whoop MCP Server</h3>
         <div class="space-y-3 text-ink-muted leading-relaxed text-sm">
           <p><strong class="text-ink">What this app accesses:</strong> This tool connects to your Whoop account via Whoop's OAuth 2.0 authorization flow. With your permission, it retrieves health and fitness data including recovery scores, sleep data, heart rate metrics, and strain data, based on the scopes you approve during authorization.</p>
           <p><strong class="text-ink">How your health data is used:</strong> Data retrieved from Whoop is passed in real time to an AI model (via the Anthropic API) to power queries and insights you request. This data is processed in session and is not stored on my servers after your request is fulfilled.</p>
@@ -98,7 +97,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
     <!-- Contact -->
     <div class="max-w-2xl mt-12 pt-10 border-t border-border">
-      <h2 class="font-display font-bold text-2xl text-ink tracking-display mb-2">Contact</h2>
+      <h2 class="mb-2 font-display text-3xl font-semibold text-ink">Contact</h2>
       <p class="text-ink-muted mb-8">Questions about this policy or requests to exercise your data rights can be directed to <strong class="text-ink">Chris J. Bell</strong> using the form below.</p>
       <div data-tf-live="01KKDEJ150EVQ14ZMVJDNWSPEH"></div>
     </div>

@@ -11,20 +11,21 @@ const projects = allProjects.sort((a, b) => a.data.order - b.data.order);
   title="Projects"
   description="AI agents, data tools, and products Chris Bell is actively building or has shipped."
 >
-  <div class="py-16 md:py-24">
-    <!-- Page header -->
-    <header class="mb-16 border-b border-border pb-12">
-      <h1 class="font-display font-bold text-5xl md:text-7xl text-ink tracking-display">
-        Projects.
-      </h1>
-      <p class="text-ink-muted mt-4 max-w-md leading-relaxed">
-        Things I'm actively building. New projects start as private experiments; they show
-        up here when they're ready to be seen.
-      </p>
+  <div class="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-24">
+    <header class="mb-14 border-b border-border pb-12">
+      <p class="mb-4 text-[13px] font-bold uppercase text-accent">Selected work</p>
+      <div class="grid gap-8 md:grid-cols-[minmax(0,.7fr)_minmax(0,.75fr)]">
+        <h1 class="font-display text-6xl font-semibold leading-none text-ink md:text-8xl">
+          Projects.
+        </h1>
+        <p class="max-w-xl text-lg leading-relaxed text-ink-muted">
+          Things I'm actively building. New projects start as private experiments; they show
+          up here when they're ready to be seen.
+        </p>
+      </div>
     </header>
 
-    <!-- Project grid -->
-    <div class="grid md:grid-cols-2 gap-6">
+    <div class="grid gap-5 md:grid-cols-2">
       {projects.map((project) => (
         <ProjectCard
           title={project.data.title}
@@ -35,6 +36,6 @@ const projects = allProjects.sort((a, b) => a.data.order - b.data.order);
       ))}
     </div>
 
-    <div class="py-12"></div>
+    <div class="py-8"></div>
   </div>
 </BaseLayout>

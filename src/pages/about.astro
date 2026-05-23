@@ -1,26 +1,35 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SignalBoard from '../components/SignalBoard.astro';
 ---
 
 <BaseLayout
   title="About"
   description="I build platform products — data infrastructure, fit-for-purpose data products, governance designed in rather than bolted on. Previously Oracle AdTech, MarTech, and health data at scale."
 >
-  <div class="py-16 md:py-24">
-    <!-- Page header -->
+  <div class="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-24">
     <header class="mb-16 border-b border-border pb-12">
-      <h1 class="font-display font-bold text-5xl md:text-7xl text-ink tracking-display">
-        About.
-      </h1>
+      <p class="mb-4 text-[13px] font-bold uppercase text-accent">About</p>
+      <div class="grid gap-8 md:grid-cols-[minmax(0,.7fr)_minmax(0,.75fr)]">
+        <h1 class="font-display text-6xl font-semibold leading-none text-ink md:text-8xl">
+          Platform thinking, organizational reality.
+        </h1>
+        <p class="max-w-xl text-lg leading-relaxed text-ink-muted">
+          I build products where the hard part is not only making the system work, but making
+          it trustworthy enough for real organizations to rely on.
+        </p>
+      </div>
     </header>
 
-    <!-- Content grid -->
-    <div class="grid md:grid-cols-3 gap-12 md:gap-16">
-      <!-- Main narrative -->
+    <section class="mb-16">
+      <SignalBoard />
+    </section>
+
+    <div class="grid gap-12 md:grid-cols-3 md:gap-16">
       <div class="md:col-span-2">
         <div class="space-y-12">
-          <div>
-            <p class="text-ink-muted leading-relaxed">
+          <div class="rounded-[8px] border border-border bg-surface p-7 md:p-8">
+            <p class="text-lg leading-relaxed text-ink-muted">
               I build platform products &mdash; the kind that sit underneath other teams' work
               and have to be right in order for anything downstream to be trusted. Data
               infrastructure, fit-for-purpose data products, governance designed in rather than
@@ -30,10 +39,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <div>
-            <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            <h2 class="mb-4 font-display text-4xl font-semibold leading-tight text-ink">
               At Oracle
             </h2>
-            <p class="text-ink-muted leading-relaxed mb-4">
+            <p class="mb-4 leading-relaxed text-ink-muted">
               I did that twice, in different industries, at scale. First for a $200M+ AdTech
               and MarTech business &mdash; multi-source marketing signals that had to be
               harmonized, resolved, and made trustworthy enough to build decisioning products
@@ -43,7 +52,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               different format, with a different definition of the same field. Before any of it
               is worth building on, it has to be made coherent.
             </p>
-            <p class="text-ink-muted leading-relaxed">
+            <p class="leading-relaxed text-ink-muted">
               The architecture challenge is familiar. The reason it matters is not &mdash; a bad
               marketing audience wastes money; unreliable clinical data affects care decisions.
               Same lens, different domain, meaningfully higher stakes.
@@ -51,10 +60,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <div>
-            <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            <h2 class="mb-4 font-display text-4xl font-semibold leading-tight text-ink">
               Building Organizations
             </h2>
-            <p class="text-ink-muted leading-relaxed">
+            <p class="leading-relaxed text-ink-muted">
               Leading PM organizations of upwards of forty people taught me that the technical
               work is a small fraction of the real work. The real work is alignment &mdash; and
               I mean actual alignment, not consensus, which is slower and usually wrong.
@@ -68,16 +77,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <div>
-            <h2 class="font-display font-bold text-2xl text-ink mb-4">
+            <h2 class="mb-4 font-display text-4xl font-semibold leading-tight text-ink">
               The Gap That Matters
             </h2>
-            <p class="text-ink-muted leading-relaxed mb-4">
+            <p class="mb-4 leading-relaxed text-ink-muted">
               Enterprise software is littered with technically sound products that didn't take
               because the organization couldn't absorb them. Whether a SaaS platform actually
               succeeds is at least as much a function of change management as the technology
               &mdash; sometimes more.
             </p>
-            <p class="text-ink-muted leading-relaxed">
+            <p class="leading-relaxed text-ink-muted">
               That dynamic is only getting sharper. The gap between what AI can do and what
               most organizations can actually put to work isn't capability. It's trust,
               literacy, and the willingness to redesign workflows that used to work well enough.
@@ -88,7 +97,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <div class="pt-4 border-t border-border">
-            <p class="text-ink-muted leading-relaxed">
+            <p class="leading-relaxed text-ink-muted">
               I like building things. This site is one small example. The problems above are
               the bigger ones.
             </p>
@@ -96,11 +105,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
       </div>
 
-      <!-- Sidebar -->
       <div class="md:border-l md:border-border md:pl-10">
         <div class="sticky top-8 space-y-10">
           <div>
-            <h3 class="text-xs font-medium text-ink-muted uppercase tracking-widest mb-4">
+            <h3 class="mb-4 text-xs font-bold uppercase text-accent">
               Connect
             </h3>
             <div class="flex flex-col gap-2">
@@ -108,7 +116,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 href="https://www.linkedin.com/in/bellchristopher/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center text-sm text-accent hover:text-ink transition-colors duration-150"
+                class="inline-flex items-center text-sm font-bold text-accent transition-colors duration-150 hover:text-ink"
               >
                 LinkedIn &rarr;
               </a>
@@ -116,7 +124,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 href="https://github.com/cbellbell-spin"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center text-sm text-accent hover:text-ink transition-colors duration-150"
+                class="inline-flex items-center text-sm font-bold text-accent transition-colors duration-150 hover:text-ink"
               >
                 GitHub &rarr;
               </a>
@@ -124,12 +132,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <div>
-            <h3 class="text-xs font-medium text-ink-muted uppercase tracking-widest mb-4">
+            <h3 class="mb-4 text-xs font-bold uppercase text-accent">
               Currently Building
             </h3>
             <a
               href="/projects/kate"
-              class="font-display font-bold text-lg text-ink hover:text-accent transition-colors duration-150 block"
+              class="block font-display text-3xl font-semibold text-ink transition-colors duration-150 hover:text-accent"
             >
               Kate
             </a>
@@ -137,7 +145,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <div>
-            <h3 class="text-xs font-medium text-ink-muted uppercase tracking-widest mb-4">
+            <h3 class="mb-4 text-xs font-bold uppercase text-accent">
               Based In
             </h3>
             <p class="text-sm text-ink-muted">San Francisco, CA</p>
