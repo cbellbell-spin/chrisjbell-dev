@@ -28,4 +28,4 @@ The full history — every edit, suggestion, acceptance, comment, rationale, and
 
 ## Status
 
-Review Room is in active development. The product brief and PRD are written; implementation is underway against the Proof SDK foundation.
+Review Room is in active development.

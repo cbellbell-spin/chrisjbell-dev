@@ -1,5 +1,5 @@
 ---
-title: "Enterprise Product Systems"
+title: "Enterprise Product System"
 description: "A suite of Cowork plugins for enterprise product work — stage-gate initiative management, IC coaching, and leadership pressure-testing — built around the specific demands of building software at scale."
 tagline: "Enterprise product work has specific demands. These tools are built around them."
 status: "Plugin"
