@@ -22,8 +22,10 @@ When the coach programs your strength session, it goes directly to a companion a
 
 The app pulls your previous performance for each exercise so you always know what you did last time. A "Coach Program" card on each exercise shows exactly what was prescribed and why — the load, the rep target, and any contextual note the coach attached.
 
-<img src="/workout-home-screenshot.png" alt="Workout home screen" />
-<img src="/workout-exercise-screenshot.png" alt="Exercise detail screen" />
+<div class="not-prose grid grid-cols-1 gap-6 sm:grid-cols-2">
+  <img src="/workout-home-screenshot.png" alt="Workout home screen" class="w-full rounded-[6px]" />
+  <img src="/workout-exercise-screenshot.png" alt="Exercise detail screen" class="w-full rounded-[6px]" />
+</div>
 
 ## Ride and Run Analysis
 
@@ -51,4 +53,6 @@ Below that, the HUD shows how your week is tracking against its goals: cycling v
 
 Everything the HUD shows is live. Open it at any time and it reflects where things actually stand.
 
-<img src="/hud-screenshot.png" alt="The Cadence HUD" />
+<a href="/hud-screenshot.png" target="_blank" rel="noopener" class="not-prose block cursor-zoom-in">
+  <img src="/hud-screenshot.png" alt="The Cadence HUD" class="w-full rounded-[6px]" />
+</a>
