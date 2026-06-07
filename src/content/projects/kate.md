@@ -44,6 +44,16 @@ Before any interview, Kate runs structured research on the company — business 
 
 Kate keeps an eye on the market so you don't have to. Tell her which companies you're interested in and she'll monitor open roles on your behalf, flagging new postings that match your target level. You stay focused on the conversations, not the job boards.
 
+## Try Kate
+
+Kate is available as a Cowork plugin for full coaching sessions, but you can also get a feel for the methodology directly in your browser — no setup required.
+
+Paste your resume and a job description and Kate will give you a structured read from the hiring committee's perspective: where you're a strong fit, where you have gaps, what questions your profile is likely to raise, and how to position yourself against what they're actually looking for.
+
+It's a zero-friction way to see how Kate thinks before committing to the full setup.
+
+[Try Kate →](https://kate.chrisjbell.dev/)
+
 ## How to Get Access
 
 Kate is currently in private beta. If you're a senior executive in active search and want a more structured, rigorous coaching process, request access below.

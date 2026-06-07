@@ -3,7 +3,7 @@ title: "Whoop MCP"
 description: "A local Model Context Protocol server for querying personal Whoop health data from AI agents."
 tagline: "Your health data, actually useful to an AI agent."
 status: "Open Source"
-order: 2
+order: 5
 cta:
   text: "View on GitHub"
   href: "https://github.com/cbellbell-spin/whoop-mcp"
