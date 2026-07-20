@@ -14,7 +14,7 @@ privacyPolicy: "/legal/privacy-policy"
 
 Kate is an AI coaching agent built on Anthropic's Claude. She starts by interviewing you — your background, career goals, and what you're optimizing for — so everything that follows is grounded in your specific situation, not generic advice dressed up as personalization.
 
-And unlike most AI tools, Kate takes notes. She doesn't rely on lossy AI memory — she writes structured session files so she always knows where you left off, what you've worked through, and where you're headed. Just like a good coach would.
+And unlike most AI tools, Kate takes notes. She doesn't rely on lossy AI memory — she writes structured session files so she always knows where you left off, what you've worked through, and where you're headed. When she offers to do something, it stays on her list until it's actually done — not just until the conversation moves on. Just like a good coach would.
 
 ## The Who Method
 
@@ -43,6 +43,10 @@ Before any interview, Kate runs structured research on the company — business 
 ## Role Monitoring
 
 Kate keeps an eye on the market so you don't have to. Tell her which companies you're interested in and she'll monitor open roles on your behalf, flagging new postings that match your target level. You stay focused on the conversations, not the job boards.
+
+## Networking
+
+Kate keeps a running ledger of your search-relevant contacts — recruiters, interviewers, referrals, anyone who's given you a hand — without you maintaining a spreadsheet. She logs who you've talked to and what's outstanding, and flags anyone you're overdue to follow up with before it costs you a relationship.
 
 ## Try Kate
 
