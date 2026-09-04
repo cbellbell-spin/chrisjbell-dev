@@ -8,6 +8,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "test:kate-download:live": "node --test test/kate-download.live.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
